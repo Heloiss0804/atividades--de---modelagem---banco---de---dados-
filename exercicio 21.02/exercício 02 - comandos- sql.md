@@ -15,4 +15,22 @@ CREATE TABLE generos (
 
 );
 ```
+ 
+ ### Criar tabela filmes
 
+```sql
+ CREATE TABLE filmes (
+   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   titulo VARCHAR (200) NOT NULL,
+   lancamento DATE NOT NULL,
+   genero_id INT NOT NULL
+);
+```
+```sql
+ CREATE TABLE filmes2 (
+   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   titulo VARCHAR (200) NOT NULL,
+   lancamento DATE NOT NULL,
+   genero_id INT NOT NULL
+);
+```
