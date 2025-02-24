@@ -28,13 +28,22 @@ DESC fabricantes;
 ```sql
 ## Isso também é comentario válido SQL
 CREATE TABLE PRODUTOS (
-id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR (45) NOT NULL,
-descricao TEXT(500) NULL,
-preco DECIMAL(6,2) NOT NULL,
-fabricante_id INT NOT NULL --será chave estrangeira
+   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   nome VARCHAR (45) NOT NULL,
+   descricao TEXT(500) NULL,
+   preco DECIMAL(6,2) NOT NULL,
+   fabricante_id INT NOT NULL --será chave estrangeira
 
 );
+```
+
+### Criar relacionamento entre as tabelas e configurar a chave estrangeira
+
+```sql
+ALTER TABLE produtos
+   ADD CONSTRAINT fk_produtos_fabricantes
+   FOREIGN KEY (fabricante_id) REFERENCES fabricantes(id);
+
 ```
 
 
