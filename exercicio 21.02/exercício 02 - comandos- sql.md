@@ -34,3 +34,14 @@ CREATE TABLE generos (
    genero_id INT NOT NULL
 );
 ```
+
+```sql
+ CREATE TABLE detalhes (
+   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   duracao INT NOT NULL,
+   sinopse TEXT(1000) NOT NULL,
+   bilheteria DECIMAL(16,2)  NULL,
+   orcamento DECIMAL(16,2) NULL,
+   filme_id INT NOT NULL
+);
+```
