@@ -23,5 +23,21 @@ CREATE TABLE fabricantes(
 DESC fabricantes;
 ```
 
+### Criar tabelas Produtos
+
+```sql
+## Isso também é comentario válido SQL
+CREATE TABLE PRODUTOS (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR (45) NOT NULL,
+descricao TEXT(500) NULL,
+preco DECIMAL(6,2) NOT NULL,
+fabricante_id INT NOT NULL --será chave estrangeira
+
+);
+```
+
+
+
 
 
