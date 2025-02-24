@@ -17,5 +17,11 @@ CREATE TABLE fabricantes(
 );
 ```
 
+### Visualizar detalhes estruturais da tabela
+
+```sql
+DESC fabricantes;
+```
+
 
 
