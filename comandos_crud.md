@@ -79,7 +79,7 @@ VALUES (
 ```sql
    INSERT INTO fabricantes (nome) VALUE('Positivo'),('Microsoft');
 
-   INSERT INTO produtos (nome, preco, quantidade, fabricante_id , descricao)
+   INSERT INTO produtos (nome, preco, quantidade, , descricao, fabricante_id )
    VALUES (
     'Xbox Series S', 
     1997, 
@@ -115,12 +115,4 @@ VALUES (
 
 
 
-   'Velocidade e desempenho de última geração.');
-INSERT INTO produtos (nome, valor, quantidade, id_fabricante, descricao)
-VALUES ('Notebook Motion', 1213.65, 8,
-   (SELECT id FROM fabricantes WHERE nome = 'Positivo'),
-   'Intel Dual Core 4GB de RAM, 128GB SSD e Tela 14,1 polegadas.');
-tem menu de contexto
-
-
-
+   
