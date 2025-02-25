@@ -32,7 +32,7 @@ CREATE TABLE generos (
    titulo VARCHAR (200) NOT NULL,
    lancamento DATE NOT NULL,
    genero_id INT NOT NULL,
-   CONSTRAINT fk_filmes2_generos FOREIGN kEY (genero_id) REFERENCES generos(id);
+   CONSTRAINT fk_filmes2_generos FOREIGN KEY (genero_id) REFERENCES generos(id);
 
 );
 ```
