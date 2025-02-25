@@ -6,7 +6,7 @@
 CREATE DATABASE catalogo_de_filmes CHARACTER SET utf8mb4;
 ```
 
-### CRIAR TABELA
+### CRIAR TABELA Generos
 
 ```sql
 CREATE TABLE generos (
