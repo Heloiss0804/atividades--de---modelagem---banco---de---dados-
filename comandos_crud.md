@@ -12,15 +12,29 @@
 ### Insert (Fabricantes)
 
 ```sql
-INSERT INTO fabricantes (nome) VALUES('Asus');
-INSERT INTO fabricantes (nome) VALUES('Dell');
-INSERT INTO fabricantes (nome) VALUES('Apple');
+  INSERT INTO fabricantes (nome) VALUES('Asus');
+  INSERT INTO fabricantes (nome) VALUES('Dell');
+  INSERT INTO fabricantes (nome) VALUES('Apple');
 
-INSERT INTO fabricantes (nome) VALUE('LG'),('Samsumg'),('Brastemp');
+  INSERT INTO fabricantes (nome) VALUE('LG'),('Samsumg'),('Brastemp');
 ```
 
 ## Select (Fabricantes)
 
 ```sql
-SELECT * FROM fabricantes;
+  SELECT * FROM fabricantes;
+```
+
+## Insert (Produtos)
+
+```sql
+   INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
+ VALUE(
+    'Ultrabook', 
+    'Equipamento de ultima gereçãp cheio de recursos,e etc e tal...',
+     3999.45,
+     7,
+     2 -- id do fabricante Dell
+
+ );
 ```
