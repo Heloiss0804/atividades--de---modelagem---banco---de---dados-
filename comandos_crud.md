@@ -29,7 +29,7 @@
 
 ```sql
    INSERT INTO produtos (nome, descricao, preco, quantidade, fabricante_id)
- VALUE(
+ VALUES(
     'Ultrabook', 
     'Equipamento de ultima gereçãp cheio de recursos,e etc e tal...',
      3999.45,
@@ -37,4 +37,90 @@
      2 -- id do fabricante Dell
 
  );
+
+   INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+    'Tablet Android',
+    'Tablet com a versão 16 do sistema operacional Android, possui tela  de 10 polegadas e armazenamento de 128 GB. Estou sem ideias do que escrever aqui.',
+    900,
+    12,
+    5 --Samsung
+);
+
+   INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES ( 
+    'Geladeira',
+    'Refrigerador fros-free com acesso à Internet',
+    5000,
+    12,
+    6 --Brastemp
+
+), 
+(
+    'iphone 18 Pro Max Ferradão',
+    'Smartphone Apple cheio de frescura e caro pra caramba...coisas de rico...',
+    9666.66,
+    3,
+    3 --Apple
+),
+(
+    'Ipad Mini',
+    'Tablet Apple com tela retina display e bla bla bla e mó bunitinha',
+    4999.12,
+    5,
+    3 --Apple
+);
 ```
+
+---
+
+### Exercício 03
+
+```sql
+   INSERT INTO fabricantes (nome) VALUE('Positivo'),('Microsoft');
+
+   INSERT INTO produtos (nome, preco, quantidade, fabricante_id , descricao)
+   VALUES (
+    'Xbox Series S', 
+    1997, 
+    5,
+   8,
+   'velocidade e desempenho de ultima geração'
+   ),
+    (
+    'Notebook Motion', 
+    8, 
+    1213.65,
+   7,
+   'Intel Dual Core 4GB de RAM, 128GB SSD e Tela 14,1 polegadas'
+   );
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   'Velocidade e desempenho de última geração.');
+INSERT INTO produtos (nome, valor, quantidade, id_fabricante, descricao)
+VALUES ('Notebook Motion', 1213.65, 8,
+   (SELECT id FROM fabricantes WHERE nome = 'Positivo'),
+   'Intel Dual Core 4GB de RAM, 128GB SSD e Tela 14,1 polegadas.');
+tem menu de contexto
+
+
+
