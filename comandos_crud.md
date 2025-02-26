@@ -119,7 +119,7 @@ WHERE fabricante_id = 3;
 
 ```
 
-### Operadores Lógicos: E, OU, NÂO
+### Operadores Lógicos: E, OU, NÃO
 
 #### E (AND)
 
@@ -127,6 +127,23 @@ WHERE fabricante_id = 3;
 -- Exibir nome e preço dos produtos que custam entre 2000 e 6000
 SELECT nome, preco FROM produtos
 WHERE preco >= 2000 AND preco <= 6000;
+
+```
+
+#### OU (OR)
+```sql
+--Mini-exercício: exibir nome, descrição dos produtos da Apple e da Samsung
+SELECT nome, descricao FROM produtos
+WHERE fabricante_id = 3 OR fabricante_id = 5;
+
+--Versão usando a função SQL IN()
+SELECT nome, descricao FROM produtos
+WHERE fabricante_id IN(3, 5);
+```
+
+#### NÃO (NOT)
+```sql
+--
 
 ```
 
