@@ -152,6 +152,28 @@ SELECT nome, descricao, preco from produtos
 WHERE fabricante_id != 7;
 ```
 
+---
+
+## UPDATE (Fabricantes)
+
+**CUIDADO🚨**
+
+**SEMPRE USE** a cláusula `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+-- Trocar o nome do fabricante Asus do Brasil
+UPDATE fabricantes SET nome = 'Asus do Brasil'
+WHERE id = 1;
+
+-- Mini-exericício: alterar a quantidade para 10 dos produtos que custam abaixo de 2000 exceto da Microsoft
+
+UPDATE produtos SET quantidade = 10
+WHERE preco <= 2000 AND fabricante_id != 8;
+
+UPDATE produtos SET preco = 1213.65
+WHERE id = 7;
+```
+
 
 
 
