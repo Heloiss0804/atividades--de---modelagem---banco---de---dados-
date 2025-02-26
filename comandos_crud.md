@@ -119,6 +119,17 @@ WHERE fabricante_id = 3;
 
 ```
 
+### Operadores Lógicos: E, OU, NÂO
+
+#### E (AND)
+
+```sql
+-- Exibir nome e preço dos produtos que custam entre 2000 e 6000
+SELECT nome, preco FROM produtos
+WHERE preco >= 2000 AND preco <= 6000;
+
+```
+
 
 
 
