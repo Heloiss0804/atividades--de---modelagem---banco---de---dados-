@@ -174,8 +174,23 @@ UPDATE produtos SET preco = 1213.65
 WHERE id = 7;
 ```
 
+## UPDATE (Fabricantes)
 
+**CUIDADO🚨**
 
+**SEMPRE USE** a cláusula `WHERE` em seu comando `DELETE` especificando uma ou mais condições para a atualização.
+
+```sql
+DELETE FROM fabricantes 
+WHERE id = 4;
+DELETE FROM fabricantes 
+WHERE id = 1;
+
+DELETE FROM produtos WHERE id = 4;
+
+DELETE FROM fabricantes WHERE id = 3;
+
+```
 
 
 
