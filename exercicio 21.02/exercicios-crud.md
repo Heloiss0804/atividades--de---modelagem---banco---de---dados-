@@ -8,7 +8,9 @@
 
 ```sql
     INSERT INTO generos(nome) VALUES('Terror'),('Suspense'),('Fantasia'),('Ação');
+```
 
+```sql
     INSERT INTO filmes(titulo,lancamento,genero_id) 
     VALUES (
     'O massacre da serra elétrica',
@@ -28,10 +30,43 @@
     3
     );
 
-    
      
- 
- 
-
-
 ```
+
+```sql
+   INSERT INTO detalhes(duracao,sinopse,bilheteria,filme_id) 
+   VALUE (
+    95,
+    'Um cara que mata com serra elétrica',
+    2369.89,
+    1
+
+  );
+    INSERT INTO detalhes(duracao,sinopse,bilheteria,filme_id) 
+   VALUE (
+    160,
+    'Ilha que da medo na praia',
+    1089,
+    2
+
+
+  );
+      INSERT INTO detalhes(duracao,sinopse,bilheteria,filme_id) 
+   VALUE (
+    80,
+    'é uma historia que não tem fim',
+    1089.23,
+    3
+
+  );
+
+  ```
+
+  ```sql
+  SELECT duracao,sinopse FROM detalhes;
+```
+
+```sql
+DELETE FROM filmes WHERE id = 1;
+```
+
