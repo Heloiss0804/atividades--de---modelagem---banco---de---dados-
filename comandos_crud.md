@@ -234,7 +234,83 @@ SELECT COUNT(DISTINCT fabricante_id) AS "Qtd mde Fabricantes com Produtos" FROM 
 SELECT nome, preco, quantidade, (preco * quantidade) AS TOTAL
 FROM produtos;
 
+--Segmentação/Agrupamento de resultados
+SELECT fabricante_id, SUM(preco) AS Total FROM produtos
+GROUP BY fabricante_id;
+
 ```
+
+## Consultas (QUERIES) em duas ou mais tabelas relacionadas (JUNÇÃO?JOIN)
+
+### Exibir o nome do produto e  nome do fabricante do produto
+```sql
+-- SELECT nomeDATabela.nomeDaColuna, nomeDaTabela2.nomeDaColuna,
+SELECT produtos.nome AS Produto, fabricantes.nome AS Fabricante
+
+--JOIN permite JUNTAR as tabela no momento do SELECT
+FROM produtos JOIN fabricantes
+
+
+-- ON tabela1.chave_estrangeira = tabela2.chave_primaria
+ON produtos.fabricante_id = fabricantes.id;
+
+```
+
+### Nome do produtom preço do produto, nome do fabricante ordenados pelo nome do produto e pelo preço
+
+```sql
+SELECT 
+    produtos.nome AS Produto,
+    produtos.preco AS Preço,
+    fabricantes.nome AS Fabricante
+FROM produtos INNER JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+ORDER BY Produto ASC, Preço DESC;    
+```
+### Fabricante, Soma dos Preçoc, Quantidade de produtos POR Fabricantes
+
+```sql
+SELECT 
+    fabricantes.nome AS Fabricante,
+   SUM(produtos.preco) AS Total,
+   COUNT(produtos.fabricante_id) AS "Qtd de Produtos"
+FROM produtos RIGHT JOIN fabricantes
+ON produtos.fabricante_id = fabricantes.id
+GROUP BY Fabricante
+ORDER BY Total;   
+ 
+```
+
+```sql
+SELECT 
+    filmes.titulo AS  Filme,
+    generos.nome AS Genero,
+    FROM filmes INNER JOIN generos
+    ON filmes.genero_id = generos.id;
+
+```
+
+
+```sql
+SELECT 
+    filmes.titulo AS  Filme,
+    detalhes.sinopse AS Detalhes,
+    FROM filmes INNER JOIN detalhes
+    ON detalhes.filmes_id = filmes.id;
+
+```
+
+
+
+```sql
+SELECT 
+    filmes.titulo AS  Filme,
+    generos.nome AS Genero,
+    detalhes.sinopse AS Detalhes,
+```
+
+
+
 
 
 
