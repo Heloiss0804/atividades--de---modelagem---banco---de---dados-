@@ -70,3 +70,7 @@
 DELETE FROM filmes WHERE id = 1;
 ```
 
+```sql
+UPDATE detalhes SET bilheteria = 11111.11
+WHERE id = 3 ;
+```
