@@ -303,10 +303,13 @@ SELECT
 
 
 ```sql
-SELECT 
+ SELECT 
     filmes.titulo AS  Filme,
     generos.nome AS Genero,
-    detalhes.sinopse AS Detalhes,
+    detalhes.sinopse AS detalhes
+    FROM filmes
+    JOIN generos ON filmes.genero_id = generos.id
+    JOIN detalhes ON detalhes.filme_id = filmes.id;
 ```
 
 
